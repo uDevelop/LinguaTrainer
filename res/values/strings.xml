@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">LinguaTrainer</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">LinguaTrainer</string>
+    <string name="RusToEng">Направление перевода: Русский -&gt; Английский</string>
+    <string name="EngToRus">Направление перевода: Английский -&gt; Русский</string>
+    <string name="changeDirection">Изменить направление</string>
+    <string name="title_activity_process">Тестирование</string>
+    <string name="start">Начать</string>
+    <string name="translateit">Переведите слово: </string>
+    <string name="next">Далее</string>
+    <string name="finish">Готово</string>
+    <string name="title_activity_result_screen">Результаты</string>
+    <string name="yourResults">Ваши результаты:</string>
+    <string name="totalWords">Всего слов в тесте:</string>
+    <string name="rightAnswers">Правильных ответов:</string>
+    <string name="wrongAnswers">Неправильных ответов:</string>
+    <string name="yourErrors">Ваши ошибки:</string>
+    <string name="hello">Для того чтобы начать тестирование, выберете направление перевода и нажмите кнопку \&quot;Начать\&quot;</string>
+
+</resources>

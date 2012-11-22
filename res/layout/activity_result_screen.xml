@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/totalWords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="@string/totalWords" />
+
+    <TextView
+        android:id="@+id/rightAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="@string/rightAnswers" />
+
+    <TextView
+        android:id="@+id/wrongAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="@string/wrongAnswers" />
+
+    <TextView
+        android:id="@+id/yourErrs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:textSize="20dp"
+        android:text="@string/yourErrors" />
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            	<GridView
+            		android:id="@+id/head"
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"           
+            		android:numColumns="3" >
+        		</GridView>
+            	<GridView
+            		android:id="@+id/Errors"
+            		android:layout_width="fill_parent"
+            		android:layout_height="wrap_content"
+            		android:numColumns="3" >
+            	</GridView>            
+        </LinearLayout>
+        
+
+</LinearLayout>
