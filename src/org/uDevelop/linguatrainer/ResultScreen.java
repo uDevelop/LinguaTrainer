@@ -22,8 +22,8 @@ public class ResultScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_screen);
         Intent intent = getIntent();
-        mIsRusToEng = intent.getBooleanExtra("isRusToEng", true);
-        mWrongAnswers = intent.getParcelableExtra("wrongAnswers");
+        mIsRusToEng = intent.getBooleanExtra(Constants.IS_RUS_TO_ENG, true);
+        mWrongAnswers = intent.getParcelableExtra(Constants.WRONG_ANSWERS);
         mTotalAnswCountText = (TextView)findViewById(R.id.totalWords);
         mRightAnswCountText = (TextView)findViewById(R.id.rightAnswers);
         mWrongAnswCountText = (TextView)findViewById(R.id.wrongAnswers);

@@ -33,7 +33,9 @@ public class WrongAnswers implements Parcelable  {
 		mAnswers[mCount] = answ;
 		mCount++;
 	}
-	
+	public String ru;
+	public String en;
+	public String user;
 	public void moveToFirst() {
 		mCurIndex = 0;
 	}

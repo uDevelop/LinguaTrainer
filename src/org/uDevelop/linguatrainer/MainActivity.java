@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
     		break;
     	case R.id.StartBtn:
     		Intent intent = new Intent(this, ProcessActivity.class);
-    		intent.putExtra("isRusToEng", mIsRusToEng);
+    		intent.putExtra(Constants.IS_RUS_TO_ENG, mIsRusToEng);
     		startActivity(intent);    		
     		break;
     	}    	

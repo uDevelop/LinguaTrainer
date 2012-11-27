@@ -23,7 +23,7 @@ public class ProcessActivity extends Activity {
         setContentView(R.layout.activity_process);
         mWordText = (TextView)findViewById(R.id.word);
         mTranslationEdit = (EditText)findViewById(R.id.translationEdit);
-        mIsRusToEng = getIntent().getBooleanExtra("isRusToEng", true);
+        mIsRusToEng = getIntent().getBooleanExtra(Constants.IS_RUS_TO_ENG, true);
         ProcessActivityState saveState = (ProcessActivityState)getLastNonConfigurationInstance(); 
         if (saveState != null) { //восстанавливаем все после поворота экрана
         	mWordsStorage = saveState.words;
@@ -72,8 +72,8 @@ public class ProcessActivity extends Activity {
     	}
     	else { 
     		Intent intent = new Intent(this, ResultScreen.class);
-    		intent.putExtra("isRusToEng", mIsRusToEng);
-    		intent.putExtra("wrongAnswers", mWrongAnswers);
+    		intent.putExtra(Constants.IS_RUS_TO_ENG, mIsRusToEng);
+    		intent.putExtra(Constants.WRONG_ANSWERS, mWrongAnswers);
     		startActivity(intent);
     		mWordsStorage.closeDatabase(); //завершаем работу с бд
     		this.finish();
