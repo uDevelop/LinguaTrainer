@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 public class DatabaseAdapter {
 
 	private final static String  sDbName = "word_db";
-	private final static int  sDbVersion = 1;
+	private final static int  sDbVersion = 3;
 	private final static String sDbSelectAll = "select * from words";
 	private final static String sDbSelectWord = "select ru_word, en_word from words where _id = ";
 	private DbOpenHelper mDbOpenHelper;

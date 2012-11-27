@@ -29,7 +29,6 @@ public class ResultScreen extends Activity {
         mWrongAnswCountText = (TextView)findViewById(R.id.wrongAnswers);
         mErrorsGrid = (GridView)findViewById(R.id.Errors); 
         mHeadGrid = (GridView)findViewById(R.id.head); 
-        showHead();
         ShowInfo();
     }
 
@@ -48,24 +47,31 @@ public class ResultScreen extends Activity {
     	mWrongAnswCountText.setText(getString(R.string.wrongAnswers)+wrongCount);
     	mRightAnswCountText.setText(getString(R.string.rightAnswers)+rightCount);
     	int count = mWrongAnswers.getWrongAnswersCount();
-    	mErrorsGrid.setNumColumns(3);
-    	String[] gridList = new String[3*count];
-    	ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.grid_cell_text, gridList);
-    	Answers answer;
-    	mWrongAnswers.moveToFirst();
-    	for (int i = 0; i < count; i++) {
-    		answer = mWrongAnswers.getNextAnswer();
-    		if (mIsRusToEng) {
-    			gridList[i*3] = answer.ru;
-    			gridList[i*3+1] = answer.en;    			
-    		}
-    		else {
-    			gridList[i*3+1] = answer.ru;
-    			gridList[i*3] = answer.en;    			
-    		}    		
-    		gridList[i*3+2] = answer.user;    											
+    	if (count > 0) {
+    		showHead();
+    	  	mErrorsGrid.setNumColumns(3);
+    	  	String[] gridList = new String[3*count];
+    	  	ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.grid_cell_text, gridList);
+    	  	Answers answer;
+    	  	mWrongAnswers.moveToFirst();
+    	  	for (int i = 0; i < count; i++) {
+    	  		answer = mWrongAnswers.getNextAnswer();
+    	  		if (mIsRusToEng) {
+    	  			gridList[i*3] = answer.ru;
+    	  			gridList[i*3+1] = answer.en;    			
+    	  		}
+    	  		else {
+    	  			gridList[i*3+1] = answer.ru;
+    	  			gridList[i*3] = answer.en;    			
+    	  		}    		
+    	  		gridList[i*3+2] = answer.user;    											
+    	  	}
+    	  	mErrorsGrid.setAdapter(adapter);
     	}
-    	mErrorsGrid.setAdapter(adapter);    	
+    	else {
+    		TextView yourErrorsText = (TextView)findViewById(R.id.yourErrs);
+    		yourErrorsText.setText(R.string.congratulation);
+    	}
     }
         
     private void showHead() {

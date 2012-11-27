@@ -18,5 +18,6 @@
     <string name="wrongAnswers">Неправильных ответов:</string>
     <string name="yourErrors">Ваши ошибки:</string>
     <string name="hello">Для того чтобы начать тестирование, выберете направление перевода и нажмите кнопку \&quot;Начать\&quot;</string>
+    <string name="congratulation">Поздравляем, вы удачно прошли тест!</string>
 
 </resources>
